@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
+
 
 const Login = () => {
   const navigate = useNavigate();
@@ -35,7 +35,7 @@ const Login = () => {
 
   return (
     <>
-      <Navbar />
+      
 
       <div className="flex justify-center items-center min-h-screen bg-pink-100 p-4">
         <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md sm:max-w-lg text-center">

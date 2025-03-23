@@ -4,9 +4,9 @@ import Navbar from './Navbar';
 const ShopList = () => {
   return (
     <>
-    <Navbar />
+    
     <div>
-
+ShopList
     </div>
     </>
   )

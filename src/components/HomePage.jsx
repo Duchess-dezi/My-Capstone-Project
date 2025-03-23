@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
-import Navbar from "./Navbar";
+
 
 const HomePage = () => {
     const navigate = useNavigate(); // Initialize navigation function
@@ -8,7 +8,7 @@ const HomePage = () => {
     return (
 
         <div className="flex flex-col justify-center items-center min-h-screen bg-gray-100 p-6">
-            <Navbar />
+            
             {/* Text Container */}
             <div className="max-w-3xl bg-white shadow-lg text-center text-yellow-900 p-10 rounded-lg">
                 <p className="font-Lobster text-3xl md:text-5xl font-bold leading-snug">

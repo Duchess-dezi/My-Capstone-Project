@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
 function SignUp() {
@@ -49,7 +48,7 @@ function SignUp() {
 
     return (
         <>
-            <Navbar />
+         
             <div className="flex flex-col justify-center items-center min-h-screen bg-pink-100 p-4">
                 <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md sm:max-w-lg text-center">
                     <h1 className="font-Lobster text-3xl text-yellow-900 mb-6">SIGN UP PAGE</h1>
