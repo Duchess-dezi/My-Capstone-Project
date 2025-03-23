@@ -5,7 +5,7 @@ import { RiShoppingBag4Line } from "react-icons/ri";
 import { GiShoppingCart } from "react-icons/gi";
 import { HiOutlineBadgeCheck } from "react-icons/hi";
 import { MdAccountCircle } from "react-icons/md";
-import { FaBars, FaTimes } from "react-icons/fa"; // For hamburger icon
+import { FaBars, FaTimes } from "react-icons/fa"; 
 
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +13,7 @@ function Navbar() {
     return (
         <nav className="fixed top-0 left-0 w-full bg-white shadow-md p-4 z-50">
             <div className="flex justify-between items-center max-w-6xl mx-auto">
-                {/* Logo */}
+                
                 <Link to="/">
                     <img src="/images/dspecial1.png" alt="Logo" className="w-20 h-20 rounded-xl shadow-md" />
                 </Link>
