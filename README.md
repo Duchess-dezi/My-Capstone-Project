@@ -1,30 +1,30 @@
-# 🍰 Dezi's Special - Pastry Shop App
+# Dezi's Special - Pastry Shop App
 
-## 📌 Overview
+## Overview
 
 **Dezi's Special** is an e-commerce web application for ordering pastries online. Users can browse pastries, add them to the cart, make secure payments, and track their orders.
 
-## 🎯 Features
+## Features
 
-- 🏠 **Homepage**: Welcome screen with an introduction to Dezi's Special.
-- 🛒 **Shop**: Browse available pastries with images, descriptions, and prices.
-- 🛍️ **Cart**: Add, remove, and update items before checkout.
-- 💳 **Checkout**: Secure payment integration for seamless purchases.
-- 🔐 **Authentication**: User login and sign-up functionality.
-- 🛠 **User Account**: View order history and manage account details.
+-  **Homepage**: Welcome screen with an introduction to Dezi's Special.
+-  **Shop**: Browse available pastries with images, descriptions, and prices.
+-  **Cart**: Add, remove, and update items before checkout.
+-  **Checkout**: Secure payment integration for seamless purchases.
+-  **Authentication**: User login and sign-up functionality.
+-  **User Account**: View order history and manage account details.
 
-## 🏗️ Technologies Used
+## Technologies Used
 
 - **Frontend**: React, Tailwind CSS
 - **State Management**: React Hooks (useState, useEffect)
 - **Routing**: React Router
-- **Icons**: react-icons / Heroicons
+- **Icons**: react-icons 
 - **API Integration**: Mock API for product management
 - **Local Storage**: For user authentication and cart persistence
 
-## 🚀 Getting Started
+##  Getting Started
 
-### 📥 Installation
+###  Installation
 
 1. Clone the repository:
    ```sh
@@ -40,14 +40,14 @@
    npm run dev
    ```
 
-### 📌 Usage
+###  Usage
 
 - Visit `http://localhost:5173/` to access the app.
 - Sign up or log in to your account.
 - Browse the shop and add pastries to your cart.
 - Proceed to checkout and make payments.
 
-## 🔧 Project Structure
+##  Project Structure
 
 ```
 my-pastry-shop/
@@ -69,17 +69,17 @@ my-pastry-shop/
 │── README.md
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Feel free to fork the repo and submit a pull request.
 
-## 📄 License
+##  License
 
 MIT License - Free to use and modify.
 
 ---
 
-📌 *Made with ❤️ by Christabel Udezi*
+ *Made by Christabel Udezi*
 
 
 
