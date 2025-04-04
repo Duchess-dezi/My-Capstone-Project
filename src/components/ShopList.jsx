@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 const SHOPIFY_ENDPOINT = "https://jmay2x-k1.myshopify.com/api/2023-04/graphql.json";
 const SHOPIFY_TOKEN = import.meta.env.VITE_SHOPIFY_TOKEN;
 
 function ShopList({ onSelectProduct }) {
+  const navigate = useNavigate();
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -63,7 +65,8 @@ function ShopList({ onSelectProduct }) {
           <h2 className="text-xl font-semibold mt-2">{product.title}</h2>
           <p className="text-gray-600">{product.description}</p>
           <p className="font-bold text-pink-600 mt-2">₦{product.variants.edges[0].node.price.amount}</p>
-          <button onClick={() => onSelectProduct(product)} className="mt-3 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600">
+          <button onClick={() => navigate(`/products/${product.id}`, { state: { product } })}
+           className="mt-3 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600">
             View Details
           </button>
         </div>
