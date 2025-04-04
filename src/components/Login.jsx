@@ -27,7 +27,7 @@ const Login = () => {
 
     if (storedUser.email === loginData.email && storedUser.password === loginData.password) {
       alert("Login successful!");
-      navigate("/productList"); 
+      navigate("/shoplist"); 
     } else {
       alert("Invalid email or password. Please try again.");
     }

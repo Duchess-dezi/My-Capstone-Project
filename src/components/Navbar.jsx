@@ -26,7 +26,7 @@ function Navbar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/shop" className="flex items-center gap-2 hover:text-red-600 active:text-red-900 cursor-pointer">
+                        <Link to="/shoplist" className="flex items-center gap-2 hover:text-red-600 active:text-red-900 cursor-pointer">
                             <RiShoppingBag4Line /> Shop
                         </Link>
                     </li>
@@ -63,7 +63,7 @@ function Navbar() {
                         <Link to="/" className="hover:text-red-600 active:text-red-900 cursor-pointer" onClick={() => setIsOpen(false)}>Home</Link>
                     </li>
                     <li>
-                        <Link to="/shop" className="hover:text-red-600 active:text-red-900 cursor-pointer" onClick={() => setIsOpen(false)}>Shop</Link>
+                        <Link to="/shoplist" className="hover:text-red-600 active:text-red-900 cursor-pointer" onClick={() => setIsOpen(false)}>Shop</Link>
                     </li>
                     <li>
                         <Link to="/cart" className="hover:text-red-600 active:text-red-900 cursor-pointer" onClick={() => setIsOpen(false)}>Cart</Link>
