@@ -102,10 +102,10 @@ function ProductDetails() {
     const price = product.variants.edges[0]?.node.price.amount || "N/A";
 
     return (
-        <div className="p-4 max-w-xl mx-auto">
+        <div className="flex flex-col justify-center rounded-lg shadow-lg min-h-screen p-4 max-w-xl mx-auto">
             <button
                 onClick={() => navigate(-1)}
-                className="text-blue-500 mb-4 hover:underline"
+                className="text-red-500 mb-4 hover:underline"
             >
                 &larr; Back to Products
             </button>
@@ -123,7 +123,7 @@ function ProductDetails() {
 
             <button
                 onClick={handleAddToCart}
-                className="mt-4 bg-red-900 text-yellow-100 px-4 py-2 rounded hover:bg-pink-600 transition-colors"
+                className="mt-4 bg-red-900 text-yellow-700 px-4 py-2 rounded hover:bg-pink-500 transition-colors"
             >
                 Add to Cart
             </button>

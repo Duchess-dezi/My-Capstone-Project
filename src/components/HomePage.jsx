@@ -11,7 +11,7 @@ const HomePage = () => {
             
             {/* Text Container */}
             <div className="max-w-3xl bg-white shadow-lg text-center text-yellow-900 p-10 rounded-lg">
-                <p className="font-Lobster text-3xl md:text-5xl font-bold leading-snug">
+                <p className="font-Oswald text-3xl md:text-5xl font-bold leading-snug cursor-pointer">
                     WELCOME TO DEZI'S SPECIAL, WHERE WE BRING THE TASTE TO EVERY BITE,<br />
                     WHAT'S YOUR PLEASURE FOR TODAY!!
                 </p>

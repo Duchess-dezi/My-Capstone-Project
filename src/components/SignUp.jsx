@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function SignUp() {
     const navigate = useNavigate();
 
-    // State to store form data
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -13,7 +12,7 @@ function SignUp() {
         confirmPassword: "",
     });
 
-    // Handles input changes
+    
     const handleChange = (e) => {
         setFormData({
             ...formData,
@@ -21,7 +20,7 @@ function SignUp() {
         });
     };
 
-    // Handles form submission
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
