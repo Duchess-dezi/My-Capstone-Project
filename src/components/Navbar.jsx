@@ -47,7 +47,6 @@ function Navbar() {
                     </li>
                 </ul>
 
-                {/* Mobile Menu Button (Hamburger Icon) */}
                 <button
                     className="md:hidden text-pink-400 text-3xl focus:outline-none"
                     onClick={() => setIsOpen(!isOpen)}
@@ -55,8 +54,7 @@ function Navbar() {
                     {isOpen ? <FaTimes /> : <FaBars />}
                 </button>
             </div>
-
-            {/* Mobile Menu (Toggles Open/Close) */}
+            {/* mobile menu */}
             {isOpen && (
                 <ul className="md:hidden flex flex-col items-center space-y-4 text-pink-400 font-bold text-lg py-4 bg-white shadow-lg">
                     <li>

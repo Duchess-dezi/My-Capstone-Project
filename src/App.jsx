@@ -29,9 +29,6 @@ function App() {
               <Route path="/signup" element={<SignUp />} />
               <Route path="/checkout" element={<CheckOut />} />
               <Route path="/myaccount" element={<MyAccount />} />
-              
-             
-              <Route path="*" element={<div>404 - Page Not Found</div>} />
             </Routes>
           </main>
 
