@@ -29,7 +29,7 @@ function CheckOut() {
       return;
     }
  alert("Order placed successfully!");
-    navigate("/"); 
+    navigate("/shoplist"); 
   };
 
   return (
