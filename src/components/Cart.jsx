@@ -1,6 +1,5 @@
-// src/components/Cart.jsx
 import React from 'react';
-import { useCart } from './context/CartContext';
+import { useCart } from '../context/CartContext';
 
 function Cart() {
   const { cartItems, removeFromCart } = useCart();
@@ -38,3 +37,4 @@ function Cart() {
     </div>
   );
 }
+export default Cart;

@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useParams, useNavigate } from 'react-router-dom';
+import { useCart } from '../context/CartContext'; 
+
+
+const SHOPIFY_ENDPOINT = "https://jmay2x-k1.myshopify.com/api/2023-04/graphql.json";
+const SHOPIFY_TOKEN = import.meta.env.VITE_SHOPIFY_TOKEN;
 
 function ProductDetails() {
     const { addToCart } = useCart();
@@ -22,30 +27,29 @@ function ProductDetails() {
                         },
                         body: JSON.stringify({
                             query: `
-                query GetProduct($id: ID!) {
-                  product(id: $id) {
-                    id
-                    title
-                    description
-                    images(first: 1) {
-                      edges {
-                        node {
-                          url
-                        }
-                      }
-                    }
-                    variants(first: 1) {
-                      edges {
-                        node {
-                          price {
-                            amount
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              `,
+                                query GetProduct($id: ID!) {
+                                    product(id: $id) {
+                                        id
+                                        title
+                                        description
+                                        images(first: 1) {
+                                            edges {
+                                                node {
+                                                    url
+                                                }
+                                            }
+                                        }
+                                        variants(first: 1) {
+                                            edges {
+                                                node {
+                                                    price {
+                                                        amount
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }`,
                             variables: { id: productId }
                         })
                     });
@@ -63,13 +67,6 @@ function ProductDetails() {
         }
     }, [productId, product]);
 
-    if (loading) return <div>Loading...</div>;
-    if (error) return <div>{error}</div>;
-    if (!product) return <div>Product not found</div>;
-
-    const image = product.images.edges[0]?.node.url || '/placeholder.jpg';
-    const price = product.variants.edges[0]?.node.price.amount || "N/A";
-
     const handleAddToCart = () => {
         if (!product) return;
 
@@ -81,30 +78,37 @@ function ProductDetails() {
             variants: product.variants.edges[0]?.node.id
         });
         alert('Item added to cart!');
+    };
 
-        return (
-            <div className="p-4 max-w-xl mx-auto">
-                <button
-                    onClick={() => navigate(-1)}
-                    className="text-blue-500 mb-4 hover:underline"
-                >
-                    &larr; Back to Products
-                </button>
+    if (loading) return <div>Loading...</div>;
+    if (error) return <div>{error}</div>;
+    if (!product) return <div>Product not found</div>;
 
-                <img src={image} alt={product.title} className="w-full h-64 object-cover rounded" />
-                <h1 className="text-3xl font-bold mt-4">{product.title}</h1>
-                <p className="text-gray-700 mt-2">{product.description}</p>
-                <p className="text-xl font-semibold text-pink-600 mt-4">₦{price}</p>
+    const image = product.images.edges[0]?.node.url || '/placeholder.jpg';
+    const price = product.variants.edges[0]?.node.price.amount || "N/A";
 
-                <button
-                    onClick={handleAddToCart}
-                    className="mt-4 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition-colors"
-                >
-                    Add to Cart
-                </button>
-            </div>
-        );
-    }
+    return (
+        <div className="p-4 max-w-xl mx-auto">
+            <button
+                onClick={() => navigate(-1)}
+                className="text-blue-500 mb-4 hover:underline"
+            >
+                &larr; Back to Products
+            </button>
+
+            <img src={image} alt={product.title} className="w-full h-64 object-cover rounded" />
+            <h1 className="text-3xl text-yellow-900 font-bold mt-4">{product.title}</h1>
+            <p className="text-yellow-800 mt-2">{product.description}</p>
+            <p className="text-xl font-semibold text-pink-600 mt-4">₦{price}</p>
+
+            <button
+                onClick={handleAddToCart}
+                className="mt-4 bg-red-900 text-yellow-800 px-4 py-2 rounded hover:bg-pink-600 transition-colors"
+            >
+                Add to Cart
+            </button>
+        </div>
+    );
 }
 
 export default ProductDetails;
